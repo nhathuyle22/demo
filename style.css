@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./images/background.jpg);
+    background-size: cover;
+}
+.container{
+    position: relative;
+    max-width: 850px;
+    width: 100%;
+    background: whitesmoke;
+    padding: 40px 30px;
+    box-shadow: 0 5px 10px black;
+    perspective: 2800px;
+    border-radius: 20px;
+}
+#flip{
+    display: none;
+}
+.container .cover{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 50%;
+    z-index: 98;
+    transition: all 1s ease;
+    transform-origin: left;
+    transform-style: preserve-3d;
+}
+.container .cover::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #a4b3c3;
+    opacity: 0.5;
+    z-index: 100;
+    border-radius: 20px;
+}
+.container .cover::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #a4b3c3;
+    opacity: 0.5;
+    z-index: 100;
+    border-radius: 20px;
+    transform: rotateY(180deg);
+}
+.container #flip:checked ~ .cover{
+    transform: rotateY(-180deg);
+}
+.container .cover img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    z-index: 12;
+    backface-visibility: hidden;
+}
+.container .cover .back .imgbehind{
+    transform: rotateY(180deg);
+}
+.container .cover .text{
+    position: absolute;
+    z-index: 111;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.cover .text .text-1,
+.cover .text .text-2{
+    font-size: 20px;
+    font-weight: bolder;
+    color: whitesmoke;
+    text-align: center;
+    backface-visibility: hidden;
+}
+.container form{
+    height: 100%;
+    width: 100%;
+    background: whitesmoke;
+}
+.container .form-now{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.form-now .login-form,
+.form-now .signup-form{
+    width: calc(100%/2-25px);
+}
+form .form-now .title{
+    position: relative;
+    font-size: 24px;
+    font-weight: 500;
+    color: darkslategrey;
+}
+form .form-now .title:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 25px;
+    background: #184475;
+}
+form .form-now .control-boxes{
+    margin-top: 30px;
+}
+form .form-now .control-box{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    position: relative;
+}
+.form-now .control-box input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 0 30px;
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+.form-now .control-box input:valid,
+.form-now .control-box input:focus{
+    border-color: #184475;
+}
+.form-now .control-box i{
+    position: absolute;
+    color: #184475;
+    font-size: 17px;
+}
+form .form-now .button{
+    color: whitesmoke;
+}
+form .form-now .button input{
+    color: whitesmoke;
+    background: #184475;
+    border-radius: 5px;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.4s ease;    
+}
+form .form-now .text a{
+    text-decoration: none;
+}
+form .form-now .text a:hover{
+    text-decoration: underline;
+}
+form .form-now label{
+    color: #2a5391;
+    cursor: pointer;
+}
+form .form-now label:hover{
+    color: #2a5391;
+    text-decoration: underline;
+}
+form .form-now .login-text,
+form .form-now .signup-text{
+    text-align: center;
+    margin-top: 25px;
+}

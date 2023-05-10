@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./login.js"></script>
+    <script src="jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+    <div class="container">
+        <input type="checkbox" id="flip">
+        <div class="cover">
+            <div class="front">
+                <img class="imgfront" src="./images/imgfront.jpg" alt="">
+                <div class="text">
+                    <span class="text-1">Are you looking for <br> a place to post, buy or rent real estate?</span>
+                    <span class="text-2">Come with us</span>
+                </div>
+            </div>
+            <div class="behind">
+                <img class="imgbehind" src="./images/imgbehind.jpg" alt="">
+                <div class="text">
+                    <span class="text-1">Are you looking for <br> a place to post, buy or rent real estate?</span>
+                    <span class="text-2">Come with us</span>
+                </div>
+            </div>
+        </div>
+        <form id="login" action="#">
+          <div class="form-now">
+            <div class="login-form">
+              <div class="title">LOGIN</div>
+              <div class="control-boxes">
+                  <div class="control-box">
+                      <i class="fas fa-envelope"></i>
+                      <input type="text" id="email" name="email" placeholder="Enter your email">
+                  </div>
+                  <div class="control-box">
+                      <i class="fas fa-envelope"></i>
+                      <input type="password" id="pwd" name="pwd" placeholder="Enter your password">
+                  </div>
+                  <div class="text"><a href="#">Forgot password?</a></div>
+                  <div class="button control-box">
+                      <input type="submit" id="login" name="login" value="Login">
+                  </div>
+                  <div class="login-text">Don't have account? <label for="flip">Signup now</label></div>
+              </div>
+          </div>
+          <div class="signup-form">
+              <div class="title">SIGN UP</div>
+              <div class="control-boxes">
+                  <div class="control-box">
+                      <i class="fas fa-user"></i>
+                      <input type="text" id="name" name="name" placeholder="Enter your name">
+                  </div>
+                  <div class="control-box">
+                      <i class="fas fa-envelope"></i>
+                      <input type="text" id="email" name="email" placeholder="Enter your email">
+                  </div>
+                  <div class="control-box">
+                      <i class="fas fa-envelope"></i>
+                      <input type="password" id="pwd" name="pwd" placeholder="Enter your password">
+                  </div>
+                  <div class="button control-box">
+                      <input type="submit" id="signup" name="signup" value="Sign up">
+                  </div>
+                  <div class="signup-text">Already have account? <label for="flip">Login now</label></div>
+              </div>
+          </div>
+          </div>
+        </form>
+    </div>
+</body>
+</html>
